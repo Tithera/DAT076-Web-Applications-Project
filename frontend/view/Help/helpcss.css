@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-mar-06, 10:15:16
+   Responsible for this class: Emilia Vestlund
+*/
+
+/*
+two pages
+*/
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+nav.twopage {
+    float: left;
+    max-width: 230px;
+    margin: 1;
+    padding: 2em;
+}
+
+nav.twopage ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav.twopage ul a {
+    text-decoration: none;
+    
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+}
+
+
+
+
+/*
+article for the help page
+*/
+article img {
+    margin-left: 20 px;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 2em;
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+}
+
+
+
+/*
+ the picture has an imageshadow so its looks cooler
+*/
+.image_shadow { 
+       
+border-radius: 90px;
+box-shadow: 3px 3px 9px rgba(0,0,0, 0.5); 
+}
+    
+

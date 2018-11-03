@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<!-- Person responsible for class: Therese Sturesson -->
+
+<html>
+    
+    <head>   
+        <!-- Head information -->
+        <title>Rent Out</title>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" href="../resources/css/style.css" type="text/css"/>
+        
+        <script src="../dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="../dist/bootstrap.min.css">
+        <script src="../dist/bootstrap.min.js"></script>
+        <script src="../dist/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="../dist/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="../indexcss.css" type="text/css"/>
+        
+        <script type="module" src="RentOuttable.js"></script>
+        <script type="module" src="../control/RentOutCtrl.js"></script>
+        
+        <script>
+            function sendForm() {
+                alert ("You sended a request on the appartment");
+            }
+        </script>
+    </head>
+
+    
+    <body>
+        <!-- The navigation bar  -->
+        <nav class="w3-bar w3-black">
+            <a href="../index.html" class="w3-button w3-bar-item">Home</a>
+            <a href="Rent.html" class="w3-button w3-bar-item">Rent</a>
+            <a href="RentOut.html" class="w3-button w3-bar-item">Rent out</a>
+            <a href="Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
+            <a href="Help/help.html" class="w3-button w3-bar-item">Help</a>
+        </nav>
+
+        <!-- The header -->
+        <div class="header">
+          <img src="../resources/img/rentOutimg.jpg" alt="logo" style="width:100%" />
+          <h1>Rent out</h1>
+        </div>
+
+        <!-- Button to get to the addRentOut page -->
+        <div class ="blue">
+            <button onclick="window.location.href='/view/addRentOut.html'" class="button" style="float: right; margin: -50px 0 10px 0;"><span>Add a new ad </span></button>
+        </div>
+
+        <!-- The table with rent out ads -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Here the datatable hooks in -->
+                <table id="rentOut" class="table table-hover" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Address</th>
+                            <th>Room</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Name</th>
+                            <th>Phone nr</th>
+                            <th>Mail</th>
+                            <th>Image</th>
+
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>Address</th>
+                            <th>Room</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                            <th>Name</th>
+                            <th>Phone nr</th>
+                            <th>Mail</th>
+                            <th>Image</th>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class= "footer">
+            <p> Apartments.com is developed by: 
+                 Amanda Jonsson,  Emilia Vestlund and Therese Sturesson. </p>
+            <p> Contact information: <a href="mailto:apatments@apartments.com">
+                 apartments@apartments.com</a></p>
+        </div>
+
+        <!-- The pop-up window with update and delete -->
+        <div id="editDeleteModal" class="modal fade">
+
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Update, Delete or enroll interest the ad?</h4>
+                    </div>
+                    
+                   
+                    <div class="modal-body">
+
+                        <nav class ="twopage">
+                            
+                            <h1 class="h1popup">Admin view</h1>
+                            <p> Do you wanna update or delete you ad?</p>
+    
+                        <form>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rid" type="text" disabled="true" />
+                                Id</p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="radress" type="text" />
+                                Adress</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <p>
+                                <input id="rroom" type="text" />
+                                Room</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <p>
+                                <input id="rprice" type="text" />
+                                Price</p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rdescription" type="text" />
+                                Description</p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rname" type="text" />
+                                Name</p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rphoneNr" type="text" />
+                                Phonenr</p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rmail" type="text" />
+                                Mail</p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rimage" type="text" />
+                                Image URL</p>
+                            </div>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button id="update" type="button" class="btn btn-primary">Update</button>
+                            <button id="delete" type="button" class="btn btn-danger">Delete</button>
+  
+                         </form>
+
+                        </nav>                        
+
+   <!--  I have choose to call the left side for nav and right
+   side for article to split the mup even if 
+   nav is for navigation--> 
+                        <article>
+                            <h1 class="h1popup">Guest view</h1>
+                                <p> Would you like to rent this apartment</p>
+                            <form>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rid" type="text" required/>
+                                First name </p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="radress" type="text" required />
+                                Last name </p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rdescription" type="text"  required />
+                                Email </p>
+                            </div>
+
+                            <div class="form-group">
+                                <p>
+                                <input id="rname" type="text" />
+                                Reference</p>
+                            </div>
+    
+                            <div class="form-group">
+                                <p>
+                                <input id="rname" type="text" required />
+                                Phonenr</p>
+                            </div>
+                             <div class="form-group">
+                                <p>
+                                <input id="rname" type="text" />
+                                Question</p>
+                            </div>
+
+                            </form>
+       
+                            <div class ="blue">
+                                <button id="enrol" onclick= "return sendForm()" class="button" data-dismiss="modal" ><span>Enrol intrest </span></button>
+                            </div>
+
+                        </article>      
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+
+    </body>
+    
+</html>

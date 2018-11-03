@@ -1,0 +1,61 @@
+Curltests for the backend:
+
+
+For all:
+
+# (Re)create database 
+curl -v http://localhost:8080/apartments/rest/db
+
+# Options (used by CORS preflight)
+curl -v -X OPTIONS http://localhost:8080/
+
+
+For RentOut database:
+
+# Get all notes 
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu 
+
+# Get single note 
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/XX
+
+
+# Get primitive type (number of notes) 
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/count
+
+
+# Create new using json 
+curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu --data '{"id":"TT", "adress":"vägA", "room":2, "price":3000, "description": "lägA", "name":"Abert", "phoneNr" : 1111, "mail":"A@g.com", "image" : "imgA"}'
+
+
+# Update a note 
+curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu/QQ --data '{"id":"QQ", "adress":"vägQ", "room":4, "price":1500, "description": "lägQ", "name":"Qub", "phoneNr" : "0011", "mail":"Q@g.com", "image" : "imgQ"}'
+
+# Delete 
+curl -v -X DELETE http://localhost:8080/apartments/rest/reOu/QQ 
+
+
+
+
+For Rent database:
+
+# Get all notes 
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re 
+
+# Get single note 
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re/AA
+
+
+# Get primitive type (number of notes) 
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re/count
+
+
+# Create new using json 
+curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/apartments/rest/re --data '{"id":"CC", "description":"lagenhet", "price":2000, "rooms":3, "mail":"A@gma.com", "name":"Emilia", "phoneNr" :"1111"}'
+
+
+# Update a note 
+curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/apartments/rest/re/QQ --data '{"id":"BB", "description": "Hejjjjj", "price":1200, "rooms":2, "name":"Amanda", "phoneNr" : "7034"}'
+
+# Delete 
+curl -v -X DELETE http://localhost:8080/apartments/rest/re/BB 
+

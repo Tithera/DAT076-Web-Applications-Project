@@ -1,0 +1,199 @@
+
+/* 
+    Created on : 2018-mar-06, 10:04:14
+   Responsible for this class: Emilia Vestlund
+*/
+
+
+
+
+/* 
+    The header css
+*/
+.header img {
+  width: 1100px;
+  height: 350px;
+  margin: auto;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+  margin: 0 0 30px 0;
+}
+
+/* 
+    The footer css
+*/
+
+.footer { 
+    display: block;
+   
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+.footer p{
+    size: 4px;
+    color: white;
+    margin-bottom: 1em;
+   font-family: "Times New Roman", Times, serif;
+
+}
+
+.pToRight {
+    margin: 0 0 0 15px;
+}
+
+.divToRight {
+    margin: 0 0 0 15px;
+}
+
+/* A popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: #543;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* popuparoorw*/
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* For the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* animation for poppup */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/* 
+    The table css
+*/
+table {
+  border: 2px solid #555;
+  border-collapse: collapse;
+  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+}
+
+td {
+    height: 100px;
+    vertical-align: bottom; 
+}
+/* 
+    The blue buttons css
+*/
+
+.blue button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3116B4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 10px 5px 30px 5px;
+}
+
+.blue button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.blue button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.blue button:hover span {
+  padding-right: 25px;
+}
+
+.blue button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* 
+    The two page css
+*/
+div.contact nav.twopage {
+    width: 50%;
+    float: left;
+    margin: 1;
+    padding: 2em;
+    
+}
+
+div.contact nav.twopage ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+div.contact nav.twopage ul a {
+    text-decoration: none;
+    
+}
+
+div.contact article img {
+    margin-left: 20 px;
+}
+div.contact article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 5em;
+    overflow: hidden;
+}
+div.contact .header{
+    text-align: center;
+}
+
+label {
+    vertical-align: top;
+}
+
+
+.h1popup {
+    margin-top: -20px;
+}

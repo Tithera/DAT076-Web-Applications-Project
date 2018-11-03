@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<!-- Emilia Vestlund is responsible for this class -->
+
+
+
+<html>
+    <head>   
+        <!-- Head information -->
+        <title>Help</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="contactcss.css" type="text/css"/>
+<link rel="stylesheet" href="../../resources/css/style.css" type="text/css"/>
+    </head>
+
+<body>
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="../../index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="../Rent.html" class="w3-button w3-bar-item">Rent</a>
+  <a href="../RentOut.html" class="w3-button w3-bar-item">Rent out</a>
+  <a href="../Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
+  <a href="../Help/help.html" class="w3-button w3-bar-item">Help</a>
+</nav>
+<!-- The popupscript -->
+
+<script>
+function sendForm() {
+        
+        //var name=document.forms["form"]["prename"].value;
+        //var lastname=document.forms["form"]["lastname"].value;
+        //var epost=document.forms["form"]["epost"].value;
+        //var message=document.forms["form"]["meddelande"].value;
+        //if (name==null || lastname=="",epost==null || message=="",lastname==null || name=="",message==null || epost=="")
+        //{
+          //  alert("Please Fill All Required Field");
+            //return false;
+        //} else{
+            
+  
+        alert ("You sended a message");
+    
+        
+}
+</script>
+
+<!-- Header -->
+<div class="header">
+  <img src="../../resources/img/contactimg.jpg" alt="logo" style="width:100%" />
+ 
+</div>
+
+
+
+
+ <!-- Main -->
+
+   <h1 style= "text-align: center">Contact</h1>
+
+ <div class ="contact">
+
+  <nav class ="twopage">
+  <p> We are located in Laeso</p>
+    
+    
+    <h1> Find us on the map </h1>
+    <div id="map" style="width:400px;height:400px;background:yellow"></div>
+<!-- The mapscript -->
+
+<script>
+
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(57.2666656, 11.0),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+    
+};
+    var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(57.2666656, 11.0),
+          map: map,
+          title: "hello"
+        });
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        marker.setMap(map);
+
+
+}
+</script>
+<!-- The maps apiadress to google -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABe0Gb5phDKQLHoPE3cXX37zKaviLdljw&callback=myMap"></script>
+
+<p> You are also welcome to our office we have the opening hours:</p>
+    <ul>
+        
+        <li>Mondays: 09.00-14.00</li>
+        <li>Tuesdays: closed</li>
+        <li>Wednesdays: 10.00-15.00</li>
+        <li>Thursdays: 22.00-24.00</li>
+        <li>Fridays: closed</li>
+        <li>Saturdays: 06.00-21.00</li>
+                <li>Sundays: 06.00-21.00</li>
+
+        
+        
+    </ul>
+        
+</nav>
+    
+    
+    
+   <!-- The right side of the page -->
+
+    <article>
+        
+            <img src="contact.png" style="width:50%" />
+
+    <p> If you call us at 03020-2030 we can help you with </p>
+    <ul>
+        
+        <li>Taking contact with renter</li>
+        <li>Fixing pappers</li>
+        <li>Taking about rent</li>
+        <li>Help you</li>
+        <li>Guide you</li>
+        <li>And much more</li>
+        
+        
+    </ul>
+    
+    
+       <!-- the contact form -->
+
+<form id="form" name="form" action="">
+
+<fieldset style="width: 600px;">
+<legend>Contactform: </legend>
+
+<label for="prenamn">First name: *</label> <br />
+<input type="text" name="prennamn" id="fnamn" required/> <br />
+
+<label for="lastnamn">Last name: *</label> <br />
+<input type="text" name="lastnamn" id="enamn" required /> <br />
+
+<label for="epost">Epost: *</label> <br />
+<input type="text" name="epost" id="epost" required /> <br />
+
+<label for="message" style="width: 400px;">Message: *</label> <br />
+<textarea name="meddelande" id="emessage" cols="47" rows="7" required></textarea> <br />
+
+<label for="Send"></label>
+<button onclick="return sendForm()" name="Send" id="Send" value="Send message" /> Send this </button>
+
+
+</fieldset>
+
+</form>
+    
+    </article>
+</div>
+
+    
+
+<!-- footer -->
+<div class= "footer">
+    <p> Apartments.com is developed by: 
+        Amanda Jonsson,  Emilia Vestlund and Therese Sturesson. </p><p>
+    Contact information: <a href="mailto:apatments@apartments.com">
+            apartments@apartments.com</a></p>
+  
+    
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-mar-06, 10:11:33
+   Responsible for this class: Emilia Vestlund
+*/
+
+
+
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+nav.twopage {
+    width: 50%;
+    float: left;
+    margin: 1;
+    padding: 2em;
+    
+}
+
+
+
+
+
+
+article img {
+    margin-left: 20 px;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 2em;
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+}
+
+
+
+/*
+make the picture look animated buttons
+*/
+  .image_shadow { 
+       
+border-radius: 90px;
+box-shadow: 3px 3px 9px rgba(0,0,0, 0.5); 
+}
+    
+
+
+
+
+
+

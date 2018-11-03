@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-mar-06, 10:04:14
+   Responsible for this class: Emilia Vestlund
+*/
+
+/* 
+    The twopages css
+*/
+
+
+div.contact nav.twopage {
+    width: 50%;
+    float: left;
+    margin: 1;
+    padding: 2em;
+    
+}
+
+div.contact nav.twopage ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+div.contact nav.twopage ul a {
+    text-decoration: none;
+    
+}
+
+div.contact article img {
+    margin-left: 20 px;
+}
+div.contact article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 5em;
+    overflow: hidden;
+}
+
+
+.header{
+    text-align: center;
+}

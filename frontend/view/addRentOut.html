@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<!-- Person responsible for class: Therese Sturesson -->
+
+<html>
+    
+    <head>   
+        <!-- Head information -->
+        <title>Rent Out</title>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" href="../../resources/css/style.css" type="text/css"/>
+        
+        <script src="../dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="../dist/bootstrap.min.css">
+        <script src="../dist/bootstrap.min.js"></script>
+        <script src="../dist/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="../dist/css/jquery.dataTables.css">
+        
+        <script type="module" src="RentOuttable.js"></script>
+        <script type="module" src="../control/RentOutCtrl.js"></script>    
+    </head>
+    
+    
+    <body> 
+        <!-- The navigation bar  -->
+        <nav class="w3-bar w3-black">
+            <a href="../index.html" class="w3-button w3-bar-item">Home</a>
+            <a href="Rent.html" class="w3-button w3-bar-item">Rent</a>
+            <a href="RentOut.html" class="w3-button w3-bar-item">Rent out</a>
+            <a href="Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
+            <a href="Help/help.html" class="w3-button w3-bar-item">Help</a>
+        </nav>
+
+        <!-- The header -->
+        <div class="header">
+          <img src="../../resources/img/addRentOutimg.jpg" alt="logo" style="width:100%" />
+          <h1>Rent out</h1>
+        </div>
+        
+
+        <!-- A form to add a new ad for rent out -->
+        <div class="divToRight">
+            
+            <p>Add a new ad by filling in the form and click on the Add button</p>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="row">
+                            <form id="rentOutForm">
+                                <p class="pToRight">The id on the apartment:</p>
+                                <div class="col-md-1">
+                                    <input id="id" type="text" class="form-control" placeholder="Id" required>
+                                </div>
+                                <br><br>
+
+                                <p class="pToRight">The address and the description on the apartment you are renting out:</p>
+                                <div class="col-md-2">
+                                    <input id="adress" type="text" class="form-control" placeholder="Address" required>
+                                </div>
+                                
+                                <div class="col-md-1">
+                                    <input id="room" type="text" class="form-control" placeholder="Room" required>
+                                </div>
+                                
+                                <div class="col-md-1">
+                                    <input id="price" type="text" class="form-control" placeholder="Price" required>
+                                </div>
+                                <br><br>
+
+                                <div class="col-md-4">
+                                    <input id="description" type="text" class="form-control" placeholder="Description" >
+                                </div>
+                                <br><br>
+
+                                <p class="pToRight">Contact information: </p>
+                                <div class="col-md-2">
+                                    <input id="name" type="text" class="form-control" placeholder="Name" required>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <input id="phoneNr" type="text" class="form-control" placeholder="Phone number" required>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <input id="mail" type="email" class="form-control" placeholder="Mail" required>
+                                </div>
+                                <br><br>
+
+                                <p class="pToRight">An URL link to picture on the apartment</p>
+                                <div class="col-md-2">
+                                    <input id="image" type="text" class="form-control" placeholder="Image URL">
+                                </div>
+                                <br><br>
+
+                                <div class="col-md-1">
+
+                                    <div class ="blue" >
+                                        <button id="add" class="button" style="vertical-align:left"><span>Add </span></button>
+                                   </div>
+                                
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Footer with contact info -->
+        <div class= "footer">
+                <p> Apartments.com is developed by: 
+                     Amanda Jonsson,  Emilia Vestlund and Therese Sturesson. </p>
+                <p> Contact information: <a href="mailto:apatments@apartments.com">
+                     apartments@apartments.com</a></p>
+        </div>   
+        
+    </body>
+    
+</html>

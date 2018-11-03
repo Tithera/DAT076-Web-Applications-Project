@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+
+
+<!-- Emilia Vestlund is resposinble for this page --> 
+<html>
+    <head>   
+        <!-- Head information -->
+        <title>Apartments.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="resources/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="indexcss.css" type="text/css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+<script src="dist/jquery.min.js"></script>
+<script src="dist/bootstrap.min.js"></script>
+<link rel="stylesheet" href="dist/bootstrap.min.css">
+    </head>
+
+<body>
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="view/Rent.html" class="w3-button w3-bar-item">Rent</a>
+
+  <a href="view/RentOut.html" class="w3-button w3-bar-item">Rent out</a>
+  <a href="view/Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
+  <a href="view/Help/help.html" class="w3-button w3-bar-item">Help</a>
+</nav>
+
+
+<script>
+    window.$ = $;
+  </script>
+  
+  
+  <!-- The slideshows using the w3schools --> 
+
+  
+
+<div class="w3-content w3-section" style="width: 100%;">
+
+  <img class="mySlidesShowPictures w3-animate-fading" src="resources/img/A1.png" style="width:100%">
+  <img class="mySlidesShowPictures w3-animate-fading" src="resources/img/A2.jpg" style="width:100%">
+  <img class="mySlidesShowPictures w3-animate-fading" src="resources/img/A3.jpg" style="width:100%">
+</div>
+  
+    <!-- script for the caraousel for the slideshow --> 
+
+  
+  <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    //gets all the picture with class myslideshowpictures to show in the slide show
+    var pic = document.getElementsByClassName("mySlidesShowPictures");
+        //goes through the pictures and spins it around
+
+    for (i = 0; i < pic.length; i++) {
+       pic[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > pic.length) {myIndex = 1}  
+            //makes animation for the caraousel, with time 5 sec == 5000
+
+    pic[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000);    
+}
+</script>
+
+
+ <!-- Main -->
+ <header>
+
+   <h1>Welcome</h1>
+     <p> Welcome to apartments.com. 
+         
+     This is a site for you to find apartments to rent our rent out your aparment on. </p>
+
+ </header>
+
+ 
+  <nav class ="twopage">
+    
+      <a href="view/Rent.html"><img class="image_shadow" src="resources/img/apartmentwanted.JPG" width="600" height="352" /></a>
+  
+  </nav>
+   <!--  I have choose to call the left side for nav and right
+   side for article to split the mup even if 
+   nav is for navigation--> 
+    <article>
+
+       
+    <a href="view/RentOut.html"> <img class="image_shadow" src="For_rent1.png" width="600" height="352" > </a>
+
+    
+    
+    </article>
+
+
+
+
+
+<!-- footer -->
+<div class= "footer">
+    <p> Apartments.com is developed by: 
+        Amanda Jonsson,  Emilia Vestlund and Therese Sturesson. </p><p>
+    Contact information: <a href="mailto:apatments@apartments.com">
+            apartments@apartments.com</a></p>
+  
+    
+</div>
+</body>
+</html>
+
